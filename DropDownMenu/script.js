@@ -1,13 +1,15 @@
 let menu = document.querySelector('.menu');
 
 let button = document.querySelector('.button');
+
+let dropdown = document.querySelector('.dropdown');
+
 button.addEventListener('click', () => {
-    console.log(`visibility is ${menu.style.visibility}`);
-    if(menu.style.visibility === 'visible') {
-        menu.style.visibility = 'hidden';
-        console.log('test1');
+    if(dropdown.style['height'] == '0px') {
+        dropdown.style.setProperty('height', '200px');
+        dropdown.style.setProperty('opacity', '1');
     } else {
-        menu.style.visibility = 'visible';
-        console.log('test2');
+        dropdown.style.setProperty('height', '0px');
+        dropdown.style.setProperty('opacity', '0');
     }
 });
