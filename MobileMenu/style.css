@@ -1,0 +1,90 @@
+:root {
+    --header-height: 100px;
+}
+
+body, html {
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    background-color: #ebebeb;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    color: #003d7a;
+    font-weight: bold;
+}
+
+.logo-image-wrapper img {
+    height: 75px;
+}
+
+.menu-button img {
+    height: 60px;
+}
+
+.menu-button {
+    cursor: pointer;
+}
+
+.menu {
+    left: 0;
+    background-color: #ebebeb;
+    height: 100%;
+    border-radius: 0px 0px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    padding-bottom: 20px;
+}
+
+.menu-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-left: 25px;
+}
+
+.icon {
+    height: 60px;
+    cursor: pointer;
+    transition: height 0.3s ease-in-out;
+}
+
+.menu-text {
+    font-size: 2rem;;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: font-size 0.3s ease-in-out;
+}
+
+.dropdown {
+    position: absolute;
+    top: var(--header-height);
+    right: 0px;
+    transition: height 0.3s ease-in-out, width 0.3s ease-in-out, opacity 0.1s linear 0.2s;
+    height: 50vh;
+    opacity: 1;
+    width: 100%;
+}
+
+.menu-row {
+    height: 25%;
+}
+
+.main-content {
+    height: calc(100vh - var(--header-height));
+}
