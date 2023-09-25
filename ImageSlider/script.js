@@ -68,11 +68,11 @@ function updateTitle() {
     } else if (index == 1) {
         title.innerHTML = "Rainbow<br>Lorikeet";
     } else if (index == 2) {
-        title.innerHTML = "Green Parakeet";
+        title.innerHTML = "Green<br>Parakeet";
     } else if (index == 3) {
         title.innerHTML = "Panamanian<br>Golden Frog";
     } else {
-        title.innerHTML = "Atlantic Puffins";
+        title.innerHTML = "Atlantic<br>Puffins";
     }
 }
 

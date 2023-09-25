@@ -6,7 +6,6 @@
 body, html {
     padding: 0;
     margin: 0;
-    /*background-color: #d4ebff;*/
 }
 
 .container {
@@ -17,6 +16,7 @@ body, html {
     height: 100vh;
     gap: 20px;
     background-image: -webkit-linear-gradient(#d4ebff, #8cc9ff);
+    box-sizing: border-box;
 }
 
 .title {
@@ -27,6 +27,8 @@ body, html {
     height: 185px;
     display: flex;
     align-items: flex-end;
+    justify-content: center;
+    text-align: center;
 }
 
 .images {
@@ -75,4 +77,39 @@ body, html {
     height: 30px;
     border-radius: 15px;
     transition: all 0.15s ease-in-out;
+}
+
+@media (max-width: 730px) {
+
+    .container {
+        padding-bottom: 10vh;
+    }
+
+    .image-frame img {
+        height: 100%;
+    }
+
+    :root {
+        --image-width: calc(499/750*100vw);
+    }
+    
+    .image-frame {
+        height: 100vw;
+        width: var(--image-width);
+    }
+    
+    .title {
+        font-size: 15vw;
+        height: 50vw;
+    }
+
+    .button {
+        width: 5vw;
+        height: 5vw;
+        border-radius: 2.5vw;
+    }
+
+    .arrow img {
+        height: 10vw;
+    }
 }
