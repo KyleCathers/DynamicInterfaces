@@ -3,10 +3,16 @@ let root = document.querySelector(':root');
 let title = document.querySelector('.title');
 
 let leftButton = document.querySelector('.left');
-leftButton.addEventListener('click', left);
+leftButton.addEventListener('click', () => {
+    left();
+    resetTimer();
+});
 
 let rightButton = document.querySelector('.right');
-rightButton.addEventListener('click', right);
+rightButton.addEventListener('click', () => {
+    right();
+    resetTimer();
+});
 
 let navButtons = [];
 
@@ -14,12 +20,21 @@ for (let i = 0; i <= 4; i++) {
     navButtons[i] = document.querySelector("#button" + i);
     navButtons[i].addEventListener('click', () => { 
         navPressed(i);
+        resetTimer();
     });
 }
 
+let myInterval;
+resetTimer();
 updateTitle();
 updateNav();
 
+function resetTimer() {
+    clearInterval(myInterval);
+    myInterval = setInterval(() => {
+        right();
+    }, 5000);
+}
 
 function left() {
     let index = getComputedStyle(root).getPropertyValue('--index');
